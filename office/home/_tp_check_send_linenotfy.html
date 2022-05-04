@@ -1,0 +1,215 @@
+<div class="container-xl">
+    <!-- Page title -->
+    <div class="page-header d-print-none">
+        <div class="row align-items-center">
+            <div class="col">
+                <h2 class="page-title">
+                    {page_title}
+                </h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="page-body">
+    <div class="container-xl">
+        <div class="row gx-lg-4">
+            <div class="d-none d-lg-block col-lg-3">
+                <ul class="nav nav-pills nav-vertical">
+
+                    <li class="nav-item">
+                        <a href="#menu-base" class="nav-link" data-bs-toggle="collapse" aria-expanded="true">
+                             บริหารจัดการหลัก
+                             <span class="nav-link-toggle"></span>
+                        </a>
+                        <ul class="nav nav-pills collapse show" id="menu-base">
+                            <li class="nav-item">
+                                <a href="index.php" class="nav-link">
+                                บริหารจัดการหลัก
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="connect_linenotify.php" class="nav-link">
+                  เชื่อมต่อ Line Notify
+                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="check_send_linenotfy.php" class="nav-link active">
+                  ตรวจสอบการส่ง Line Notify
+                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../docs/index.php" class="nav-link">
+                            คู่มือการใช้งาน
+
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="../authentication/logout.php" class="nav-link">
+                            ออกจากระบบ
+                            
+                          </a>
+                    </li>
+
+
+                </ul>
+            </div>
+
+            <div class="col-lg-9">
+
+                <div class="row row-deck row-cards">
+                    <!-- Start Content -->
+
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center">
+                                    <div class="subheader">All Package</div>
+
+                                </div>
+                                <div class="h1 mb-3">{numPackage}</div>
+                                <div class="d-flex mb-2">
+                                    <div>Connect LineKey</div>
+                                    <div class="ms-auto">
+                                        <span class="text-green d-inline-flex align-items-center lh-1">
+                      {PercentKeyLine}% <!-- Download SVG icon from http://tabler-icons.io/i/trending-up -->
+                      <svg xmlns="http://www.w3.org/2000/svg" class="icon ms-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="3 17 9 11 13 15 21 7" /><polyline points="14 7 21 7 21 14" /></svg>
+                    </span>
+                                    </div>
+                                </div>
+                                <div class="progress progress-sm">
+                                    <div class="progress-bar bg-blue" style="width: {PercentKeyLine}%" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                        <span class="visually-hidden">{PercentKeyLine}% Connect LineKey</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center">
+                                    <div class="subheader">Booking</div>
+
+                                </div>
+                                <div class="d-flex align-items-baseline">
+                                    <div class="h1 mb-0 me-2">{numBooking}</div>
+                                    <div class="me-auto">
+                                        <span class="text-green d-inline-flex align-items-center lh-1">
+                      8% <!-- Download SVG icon from http://tabler-icons.io/i/trending-up -->
+                      <svg xmlns="http://www.w3.org/2000/svg" class="icon ms-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="3 17 9 11 13 15 21 7" /><polyline points="14 7 21 7 21 14" /></svg>
+                    </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="chart-revenue-bg" class="chart-sm"></div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center">
+                                    <div class="subheader">Confirm</div>
+
+                                </div>
+                                <div class="d-flex align-items-baseline">
+                                    <div class="h1 mb-3 me-2">00</div>
+                                    <div class="me-auto">
+                                        <span class="text-yellow d-inline-flex align-items-center lh-1">
+                      0% <!-- Download SVG icon from http://tabler-icons.io/i/minus -->
+                      <svg xmlns="http://www.w3.org/2000/svg" class="icon ms-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><line x1="5" y1="12" x2="19" y2="12" /></svg>
+                    </span>
+                                    </div>
+                                </div>
+                                <div id="chart-new-clients" class="chart-sm"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center">
+                                    <div class="subheader">Cancel</div>
+
+                                </div>
+                                <div class="d-flex align-items-baseline">
+                                    <div class="h1 mb-3 me-2">00</div>
+                                    <div class="me-auto">
+                                        <span class="text-green d-inline-flex align-items-center lh-1">
+                      4% <!-- Download SVG icon from http://tabler-icons.io/i/trending-up -->
+                      <svg xmlns="http://www.w3.org/2000/svg" class="icon ms-1" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="3 17 9 11 13 15 21 7" /><polyline points="14 7 21 7 21 14" /></svg>
+                    </span>
+                                    </div>
+                                </div>
+                                <div id="chart-active-users" class="chart-sm"></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">Package ทั้งหมด</h3>
+                            </div>
+
+                            <div class="table-responsive">
+                                <table class="table card-table table-vcenter text-nowrap datatable">
+                                    <thead>
+                                        <tr>
+
+                                            <th class="w-1">Package ID.</th>
+                                            <th class="w-2">Package Name</th>
+
+                                            <th>Line Key</th>
+                                            <th>Status</th>
+
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- START BLOCK : PACKAGE_CONNECT -->
+                                        <form action="update_linekey.php" method="post">
+                                            <input hidden name="package_idx" value="{package_idx}">
+                                            <tr>
+                                                <td><span class="text-muted">{package_idx}</span></td>
+                                                <td>{package_name}</td>
+                                                <td>
+                                                    <input class="form-input m-0" name="linekey" type="text" value="{linekey}" name="b" id="b">
+                                                </td>
+                                                <td>
+                                                    <span class="badge {status_badge} me-1"></span>{status}
+                                                </td>
+                                                <td class="text-end"><input name="action" type="submit" value="{btn_connect}" {btn_status}>{edit} </td>
+                                            </tr>
+                                        </form>
+                                        <!-- END BLOCK : PACKAGE_CONNECT -->
+                                    </tbody>
+                                </table>
+                            </div>
+
+
+                            <div class="card-footer d-flex align-items-center">
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- End Content-->
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
